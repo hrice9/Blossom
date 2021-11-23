@@ -1,7 +1,7 @@
 cards = ds_map_create();
 
 // Pip
-ds_map_add(cards, "Blade Bud", new CardData(1, "Deal 1 Damage.", spr_tempCard,
+ds_map_add(cards, "Blade Bud", new CardData(1, "Gain 1 Attack.", spr_tempCard,
 function(){ // OnClick
 	// set the mode to enemy selection mode
 	obj_battleManager.selection_mode = mode.ally_select;
