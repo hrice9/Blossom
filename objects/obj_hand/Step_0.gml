@@ -82,8 +82,7 @@ if(active) {
 if(card_to_remove != noone && destroy_card) {
 	var card_index = ds_list_find_index(hand, card_to_remove.id);
 	show_debug_message(string(card_index));
-	ds_list_delete(hand, card_index);
-	instance_destroy(card_to_remove);
+	discard(card_to_remove.id);
 	card_to_remove = noone;
 	destroy_card = false;
 	num_cards --;

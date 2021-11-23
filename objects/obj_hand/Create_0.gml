@@ -3,11 +3,15 @@
 
 cards = [
 	"Blade Bud",
+	"Blade Bud",
+	"Armor Bud",
+	"Armor Bud",
+	"Armor Bud",
 	"Armor Bud",
 	"Photogenesis",
-	"Jaws"
 ]
 
+discard_pile = ds_list_create();
 
 randomize();
 

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_rewardTile",
-    "path": "sprites/spr_rewardTile/spr_rewardTile.yy",
+    "name": "spr_battleTile",
+    "path": "sprites/spr_battleTile/spr_battleTile.yy",
   },
   "solid": false,
   "visible": true,
@@ -23,17 +23,17 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
-  "properties": [],
-  "overriddenProperties": [
-    {"propertyId":{"name":"hitpoints","path":"objects/obj_token/obj_token.yy",},"objectId":{"name":"obj_token","path":"objects/obj_token/obj_token.yy",},"value":"5","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
+  "properties": [],
+  "overriddenProperties": [],
   "parent": {
     "name": "Characters",
     "path": "folders/Objects/Characters.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_player",
+  "name": "obj_enemy",
   "tags": [],
   "resourceType": "GMObject",
 }

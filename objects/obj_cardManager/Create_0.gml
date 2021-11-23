@@ -1,24 +1,41 @@
 cards = ds_map_create();
 
 // Pip
-ds_map_add(cards, "Blade Bud", new CardData(1, "Deal 1 Damage.", spr_tempCard, function(){
+ds_map_add(cards, "Blade Bud", new CardData(1, "Deal 1 Damage.", spr_tempCard,
+function(){ // OnClick
 	// set the mode to enemy selection mode
 	obj_battleManager.selection_mode = mode.ally_select;
 	// once the enemy is selected, deal damage and play an animation
 	// destroy the card object
+},
+function() { // OnConditionComplete
+	obj_battleManager.selected_ally.attack += 1;
 }));
 
-ds_map_add(cards, "Armor Bud", new CardData(1, "Gain 1 Defence.", spr_tempCard, function() {
+ds_map_add(cards, "Armor Bud", new CardData(1, "Gain 1 Defence.", spr_tempCard,
+function() { // OnClick
 	// enter ally select mode
 	obj_battleManager.selection_mode = mode.ally_select;
 	// once an ally is selected, increase their armor by 1
 	// destroy card object
+},
+function() { // OnCondition Complete
+	obj_battleManager.selected_ally.defense += 1;
+	obj_battleManager.selected_ally = noone;
 }));
 
-ds_map_add(cards, "Photogenesis", new CardData(0, "When your turn begins, gain 1 Sun.", spr_tempCard, function() {
+ds_map_add(cards, "Photogenesis", new CardData(0, "When your turn begins, gain 1 Sun.", spr_tempCard,
+function() { // OnClick
 	// set a variable to give you one sun at the start of the next turn
 	// destroy the card object
+	// This card should set an event flag and then destroy itself, it does not need an on complete event
+	
+	obj_battleManager.selection_mode = mode.none;
 }));
+
+
+
+
 
 // Dosera
 ds_map_add(cards, "Bait", new CardData(1, "Target enemy will attack Drosera.", spr_tempCard, function() {
@@ -159,13 +176,22 @@ ds_map_add(cards, "Greenhouse", new CardData(1, "", spr_tempCard, function() {
 	
 with(obj_hand) {
 	hand = ds_list_create(); // store intsances of obj_card
-
-	num_cards = irandom_range(1, 8);
+	deck = ds_list_create();
+	
+	num_cards = array_length(cards);
 	for(var i = 0; i < num_cards; i++) {
 		var card = instance_create_layer(0, 0, layer, obj_card);
-		card.data = obj_cardManager.cards[?cards[irandom_range(0, array_length(cards)-1)]];
-		ds_list_add(hand, card);
+		card.data = obj_cardManager.cards[?cards[i]];
+		card.visible = false;
+		ds_list_add(deck, card);
+		
 	}
+	
+	ds_list_shuffle(deck);
+	draw_card();
+	draw_card();
+	draw_card();
+	
 
 	room_center = room_width/2;
 

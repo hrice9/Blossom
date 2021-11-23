@@ -4,8 +4,11 @@
 
 if(selected && mouse_check_button_pressed(mb_left)) {
 	// obj_hand.card_to_remove = self;
-	data.OnClick();
+	// if the player has enough sun, do their onlcick event
+	if(obj_battleManager.player_turn) {
+		data.OnClick();
 	
-	obj_hand.card_to_remove = self;
-	obj_hand.selected_card = self;
+		obj_hand.card_to_remove = self;
+		obj_hand.selected_card = self;
+	}
 }

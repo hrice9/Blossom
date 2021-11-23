@@ -5,7 +5,8 @@
 enum mode {
 	card_select,
 	enemy_select,
-	ally_select
+	ally_select,
+	none
 }
 
 selected_ally = noone;
