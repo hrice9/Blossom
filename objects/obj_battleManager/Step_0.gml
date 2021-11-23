@@ -25,6 +25,9 @@ if(selected_enemy != noone) {
 
 
 if(selection_mode == mode.none) {
+	obj_hand.selected_card.data.OnComplete();
 	obj_hand.destroy_card = true;
 	selection_mode = mode.card_select;
+	selected_ally = noone;
+	selected_enemy = noone;
 }

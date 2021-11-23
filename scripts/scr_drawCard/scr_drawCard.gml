@@ -36,6 +36,7 @@ function discard(card) {
 }
 
 function shuffle_discard() {
+	randomize();
 	if(!instance_exists(obj_hand)) {
 		return;
 	}
