@@ -27,3 +27,4 @@ if(type == token_type.enemy && obj_battleManager.selection_mode == mode.enemy_se
 		}
 	}
 }
+

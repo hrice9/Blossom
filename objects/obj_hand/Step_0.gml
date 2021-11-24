@@ -73,7 +73,7 @@ if(active) {
 		}
 	
 		card.x = room_center - (hand_width/2) + (card_width * i);
-		if(!card.selected) card.depth = -i;
+		if(!card.selected) card.depth = i;
 		card.target_y = 4*room_height/5;
 	
 	}

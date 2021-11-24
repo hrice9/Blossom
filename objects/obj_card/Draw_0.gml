@@ -17,11 +17,47 @@ if(selected) {
 
 draw_self();
 
+draw_set_halign(fa_left);
 draw_set_font(fa_cardDescription);
 draw_text_ext_transformed_color(
-	x - sprite_width/2 + (50 * image_xscale),
-	y + 10,
+	x - sprite_width/2 + (55 * image_xscale),
+	y + (35 * image_yscale),
 	data.description,
+	15,
+	sprite_width - (100 * image_xscale * image_xscale),
+	image_xscale,
+	image_yscale,
+	0,
+	c_black,
+	c_black,
+	c_black,
+	c_black,
+	1
+);
+
+// set to card title font
+draw_text_ext_transformed_color(
+	x - sprite_width/2 + (55 * image_xscale),
+	y - (103 * image_yscale),
+	data.title,
+	15,
+	sprite_width - (100 * image_xscale * image_xscale),
+	image_xscale,
+	image_yscale,
+	0,
+	c_black,
+	c_black,
+	c_black,
+	c_black,
+	1
+);
+
+// set to cost font
+draw_set_halign(fa_center);
+draw_text_ext_transformed_color(
+	x + sprite_width/2 - (55 * image_xscale),
+	y - (110 * image_yscale),
+	data.manaCost,
 	15,
 	sprite_width - (100 * image_xscale * image_xscale),
 	image_xscale,

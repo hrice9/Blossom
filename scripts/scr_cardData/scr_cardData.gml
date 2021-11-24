@@ -1,8 +1,9 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function CardData(_cost=0, _desc="Temp Card Description", _art=spr_tempCard, _on_click=function(){show_debug_message("Playing Card")}, _on_condition_complete=function(){show_debug_message("OH YEAH COMPLETED THE CONDITION, GAMER")}) constructor {
+function CardData(_cost=0, _title="Sample Card", _desc="Temp Card Description", _art=spr_tempCard, _on_click=function(){show_debug_message("Playing Card")}, _on_condition_complete=function(){show_debug_message("OH YEAH COMPLETED THE CONDITION, GAMER")}) constructor {
 	
 	manaCost = _cost;
+	title = _title;
 	description = _desc;
 	cardArt = _art;
 	on_click = _on_click

@@ -7,7 +7,7 @@ uniform vec2 u_resolution;
 
 void main()
 {
-	vec2 sampleStep = vec2(1.5/1920.0, 1.5/1080.0);
+	vec2 sampleStep = vec2(1.0/1920.0, 1.0/1080.0);
 	int outlineThickness = 2;
 	
 	vec4 fragColor = texture2D(gm_BaseTexture, v_vTexcoord);
