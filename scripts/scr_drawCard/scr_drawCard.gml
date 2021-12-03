@@ -8,6 +8,9 @@ function draw_card(){
 	with(obj_hand) {
 		if(ds_list_size(deck) <= 0) {
 			shuffle_discard();
+			if(ds_list_size(deck) == 0) {
+				return;
+			}
 		}
 		
 		// take the top card off of the deck

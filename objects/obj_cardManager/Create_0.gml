@@ -3,23 +3,16 @@ cards = ds_map_create();
 // Pip
 ds_map_add(cards, "Blade Bud", new CardData(1, "Blade Bud", "Gain 1 Attack.", spr_bladeRoot,
 function(){ // OnClick
-	// set the mode to enemy selection mode
 	obj_battleManager.selection_mode = mode.ally_select;
-	// once the enemy is selected, deal damage and play an animation
-	// destroy the card object
 },
 function() { // OnConditionComplete
-	//obj_battleManager.selected_ally.attack += 1;
 	array_push(obj_battleManager.selected_ally.buds, new Bud(effect_type.attack, 1, 10));
 	obj_battleManager.selected_ally.attack += 1;
 }));
 
 ds_map_add(cards, "Armor Bud", new CardData(1, "Armor Bud", "Gain 1 Defence.", spr_armorRoot,
 function() { // OnClick
-	// enter ally select mode
 	obj_battleManager.selection_mode = mode.ally_select;
-	// once an ally is selected, increase their armor by 1
-	// destroy card object
 },
 function() { // OnCondition Complete
 	array_push(obj_battleManager.selected_ally.buds, new Bud(effect_type.armor, 1, 10));
@@ -29,18 +22,11 @@ function() { // OnCondition Complete
 
 ds_map_add(cards, "Photogenesis", new CardData(0, "Photogenesis", "When your turn begins, gain 1 Sun.", spr_photogenesis,
 function() { // OnClick
-	// set a variable to give you one sun at the start of the next turn
-	// destroy the card object
-	// This card should set an event flag and then destroy itself, it does not need an on complete event
-	
-	//obj_battleManager.no_select = true;
 	obj_battleManager.selection_mode = mode.ally_select;
-	alarm[1] = 1;
-	//obj_battleManager.selected_ally = instance_find(obj_player, 0);
-	//obj_hand.selected_card = noone;
 },
-function() {
+function() { // OnComplete
 	show_debug_message("Adding sun");
+	obj_battleManager.plusSun += 2;
 }));
 
 
@@ -102,22 +88,36 @@ ds_map_add(cards, "Emergency Graft", new CardData(3, "Emergency Graft", "At the 
 
 
 
-
-
-
-
-
-ds_map_add(cards, "Pot of Green", new CardData(1, "Pot of Green", "When your turn begins, draw two cards.", spr_potOfGreen, function() {
-	// set a flag or something... idk
-	// destroy card object
+ds_map_add(cards, "Pot of Green", new CardData(1, "Pot of Green", "When your turn begins, draw two extra cards.", spr_potOfGreen,
+function(){ // OnClick
+	// set the mode to enemy selection mode
+	obj_battleManager.selection_mode = mode.ally_select;
+	// once the enemy is selected, deal damage and play an animation
+	// destroy the card object
+},
+function() { // OnConditionComplete
+	//obj_battleManager.selected_ally.attack += 1;
+	obj_battleManager.plusCards += 2;
 }));
 
-ds_map_add(cards, "Thorns", new CardData(1,"Thorns", "", spr_thorns, function() {
-	
+ds_map_add(cards, "Thorns", new CardData(1,"Thorns", "Gain 1 attack and 1 defense.", spr_thorns,
+function(){ // OnClick
+	obj_battleManager.selection_mode = mode.ally_select;
+},
+function() { // OnConditionComplete
+	array_push(obj_battleManager.selected_ally.buds, new Bud(effect_type.attack, 1, 5));
+	array_push(obj_battleManager.selected_ally.buds, new Bud(effect_type.armor, 1, 5));
+	obj_battleManager.selected_ally.attack += 1;
+	obj_battleManager.selected_ally.defense += 1;
 }));
 
-ds_map_add(cards, "Torch", new CardData(1, "Torch", "", spr_tempCard, function() {
-	
+ds_map_add(cards, "Torch", new CardData(1, "Torch", "Gain 2 attack.", spr_torch, 
+function(){ // OnClick
+	obj_battleManager.selection_mode = mode.ally_select;
+},
+function() { // OnConditionComplete
+	array_push(obj_battleManager.selected_ally.buds, new Bud(effect_type.attack, 2, 5));
+	obj_battleManager.selected_ally.attack += 2;
 }));
 
 ds_map_add(cards, "Soil", new CardData(1, "Soil", "", spr_tempCard, function() {
@@ -128,8 +128,13 @@ ds_map_add(cards, "Hybridize", new CardData(1, "Hybridize", "", spr_tempCard, fu
 	
 }));
 
-ds_map_add(cards, "Canopy", new CardData(1, "Canopy", "", spr_tempCard, function() {
-	
+ds_map_add(cards, "Canopy", new CardData(1, "Canopy", "Gain 2 defense.", spr_canopy,
+function() { // OnClick
+	obj_battleManager.selection_mode = mode.ally_select;
+},
+function() { // OnConditionComplete
+	array_push(obj_battleManager.selected_ally.buds, new Bud(effect_type.armor, 2, 10));
+	obj_battleManager.selected_ally.defense += 2;
 }));
 
 ds_map_add(cards, "Sow", new CardData(1, "Sow", "", spr_tempCard, function() {
@@ -160,8 +165,13 @@ ds_map_add(cards, "Break Through", new CardData(1, "Break Through", "", spr_temp
 	
 }));
 
-ds_map_add(cards, "Janka 9000", new CardData(1, "Janka 9000", "", spr_tempCard, function() {
-	
+ds_map_add(cards, "Janka 9000", new CardData(2, "Janka 9000", "Gain 3 defense.", spr_janka9000,
+function() { // OnClick
+	obj_battleManager.selection_mode = mode.ally_select;
+},
+function() { // OnConditionComplete
+	array_push(obj_battleManager.selected_ally.buds, new Bud(effect_type.armor, 3, 10));
+	obj_battleManager.selected_ally.defense += 3;
 }));
 
 ds_map_add(cards, "NecroBloom", new CardData(1, "NecroBloom", "", spr_tempCard, function() {
@@ -184,8 +194,13 @@ ds_map_add(cards, "Nuytsia", new CardData(1, "Nuytsia", "", spr_tempCard, functi
 	
 }));
 
-ds_map_add(cards, "Greenhouse", new CardData(1, "Greenhouse", "", spr_tempCard, function() {
-	
+ds_map_add(cards, "Greenhouse", new CardData(3, "Greenhouse", "Gain 6 defense.", spr_greenhouse, 
+function(){ // OnClick
+	obj_battleManager.selection_mode = mode.ally_select;
+},
+function() { // OnConditionComplete
+	array_push(obj_battleManager.selected_ally.buds, new Bud(effect_type.armor, 1, 10));
+	obj_battleManager.selected_ally.defense += 1;
 }));
 	
 	

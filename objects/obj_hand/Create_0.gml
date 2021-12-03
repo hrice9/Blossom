@@ -33,9 +33,11 @@ for(var i = 0; i < num_cards; i++) {
 }
 	
 ds_list_shuffle(deck);
+/*
 draw_card();
 draw_card();
 draw_card();
+*/
 	
 
 room_center = room_width/2;

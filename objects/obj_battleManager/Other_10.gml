@@ -1,12 +1,12 @@
 /// @description Draw Phase
 
 
-var num_to_draw = 3;// - ds_list_size(obj_hand.hand);
-
-for(var i = 0; i < num_to_draw; i++) {
+for(var i = 0; i < 3 + plusCards; i++) {
 	draw_card();
 }
-	
+
+plusCards = 0;
+
 tick_buds();
 
 // make enemy turn decision
@@ -17,7 +17,8 @@ for(var i = 0; i < player_num; i++) {
 	instance_find(obj_token, i).can_attack = true;
 }
 
-sun = max_sun; // plus bonus sun
+sun = max_sun + plusSun; // plus bonus sun
+plusSun = 0;
 
 current_phase = phase.card;
 selection_mode = mode.card_select;

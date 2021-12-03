@@ -9,7 +9,13 @@ cards = [
 rewards = [
 	"Pot of Green",
 	"Thorns",
-	"Torch"
+	"Thorns",
+	"Torch",
+	"Torch",
+	"Torch",
+	"Canopy",
+	"Janka 9000",
+	"Greenhouse"
 ]
 
 alarm[0] = 1; // load the next room after 1 frame
