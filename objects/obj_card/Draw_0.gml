@@ -36,6 +36,7 @@ draw_text_ext_transformed_color(
 );
 
 // set to card title font
+draw_set_font(fa_cardCost);
 draw_text_ext_transformed_color(
 	x - sprite_width/2 + (55 * image_xscale),
 	y - (103 * image_yscale),
@@ -53,19 +54,21 @@ draw_text_ext_transformed_color(
 );
 
 // set to cost font
+var c = obj_battleManager.sun >= data.manaCost ? c_black : c_red
 draw_set_halign(fa_center);
+draw_set_font(fa_cardTitle);
 draw_text_ext_transformed_color(
 	x + sprite_width/2 - (55 * image_xscale),
-	y - (110 * image_yscale),
+	y - (115 * image_yscale),
 	data.manaCost,
 	15,
 	sprite_width - (100 * image_xscale * image_xscale),
 	image_xscale,
 	image_yscale,
 	0,
-	c_black,
-	c_black,
-	c_black,
-	c_black,
+	c,
+	c,
+	c,
+	c,
 	1
 );

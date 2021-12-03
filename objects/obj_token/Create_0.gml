@@ -8,3 +8,4 @@ enum token_type {
 
 buds = [];
 type = token_type.ally;
+can_attack = true;

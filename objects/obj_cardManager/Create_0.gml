@@ -24,6 +24,7 @@ function() { // OnClick
 function() { // OnCondition Complete
 	array_push(obj_battleManager.selected_ally.buds, new Bud(effect_type.armor, 1, 10));
 	obj_battleManager.selected_ally.defense += 1;
+	show_debug_message("Applying armor");
 }));
 
 ds_map_add(cards, "Photogenesis", new CardData(0, "Photogenesis", "When your turn begins, gain 1 Sun.", spr_photogenesis,
@@ -32,8 +33,14 @@ function() { // OnClick
 	// destroy the card object
 	// This card should set an event flag and then destroy itself, it does not need an on complete event
 	
-	obj_battleManager.selection_mode = mode.none;
-	obj_hand.selected_card = noone;
+	//obj_battleManager.no_select = true;
+	obj_battleManager.selection_mode = mode.ally_select;
+	alarm[1] = 1;
+	//obj_battleManager.selected_ally = instance_find(obj_player, 0);
+	//obj_hand.selected_card = noone;
+},
+function() {
+	show_debug_message("Adding sun");
 }));
 
 
@@ -91,6 +98,14 @@ ds_map_add(cards, "Armor Bud Hen", new CardData(1, "Armor Root", "Gain 1 armor.\
 ds_map_add(cards, "Emergency Graft", new CardData(3, "Emergency Graft", "At the end of the battle, convert this bud’s remaining lifespan into Flowers.", spr_tempCard, function() {
 	// 
 }));
+
+
+
+
+
+
+
+
 
 ds_map_add(cards, "Pot of Green", new CardData(1, "Pot of Green", "When your turn begins, draw two cards.", spr_potOfGreen, function() {
 	// set a flag or something... idk
@@ -176,6 +191,7 @@ ds_map_add(cards, "Greenhouse", new CardData(1, "Greenhouse", "", spr_tempCard, 
 	
 	
 // This is test code that will be removed when the game is acutally functional
+/*
 with(obj_hand) {
 	hand = ds_list_create(); // store intsances of obj_card
 	deck = ds_list_create();
@@ -201,3 +217,4 @@ with(obj_hand) {
 
 	card_to_remove = noone; // set this to a card that wants to be removed from the hand
 }
+*/
