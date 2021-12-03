@@ -199,8 +199,8 @@ function(){ // OnClick
 	obj_battleManager.selection_mode = mode.ally_select;
 },
 function() { // OnConditionComplete
-	array_push(obj_battleManager.selected_ally.buds, new Bud(effect_type.armor, 1, 10));
-	obj_battleManager.selected_ally.defense += 1;
+	array_push(obj_battleManager.selected_ally.buds, new Bud(effect_type.armor, 6, 10));
+	obj_battleManager.selected_ally.defense += 6;
 }));
 	
 	

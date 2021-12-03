@@ -25,7 +25,10 @@
   "physicsShapePoints": [],
   "eventList": [],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"base_attack","path":"objects/obj_token/obj_token.yy",},"objectId":{"name":"obj_token","path":"objects/obj_token/obj_token.yy",},"value":"2","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"hitpoints","path":"objects/obj_token/obj_token.yy",},"objectId":{"name":"obj_token","path":"objects/obj_token/obj_token.yy",},"value":"25","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "Enemies",
     "path": "folders/Objects/Characters/Enemies.yy",
