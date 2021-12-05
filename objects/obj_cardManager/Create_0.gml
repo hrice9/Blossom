@@ -26,7 +26,7 @@ function() { // OnClick
 },
 function() { // OnComplete
 	show_debug_message("Adding sun");
-	obj_battleManager.plusSun += 2;
+	obj_battleManager.plusSun += 1;
 }));
 
 

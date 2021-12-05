@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"350140cd-4ceb-4bc1-8d3c-be993992571d","path":"sprites/spr_continueButton/spr_continueButton.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"350140cd-4ceb-4bc1-8d3c-be993992571d","path":"sprites/spr_continueButton/spr_continueButton.yy",},"LayerId":{"name":"b5d843eb-be73-43c3-8776-06bab72a67f3","path":"sprites/spr_continueButton/spr_continueButton.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_continueButton","path":"sprites/spr_continueButton/spr_continueButton.yy",},"resourceVersion":"1.0","name":"350140cd-4ceb-4bc1-8d3c-be993992571d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"bf5f5744-6fd2-4f74-bb52-deede0eb83e4","path":"sprites/spr_restartButton/spr_restartButton.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"bf5f5744-6fd2-4f74-bb52-deede0eb83e4","path":"sprites/spr_restartButton/spr_restartButton.yy",},"LayerId":{"name":"22f6e394-a9f9-4d00-b258-f7633540932e","path":"sprites/spr_restartButton/spr_restartButton.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_restartButton","path":"sprites/spr_restartButton/spr_restartButton.yy",},"resourceVersion":"1.0","name":"bf5f5744-6fd2-4f74-bb52-deede0eb83e4","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_continueButton","path":"sprites/spr_continueButton/spr_continueButton.yy",},
+    "spriteId": {"name":"spr_restartButton","path":"sprites/spr_restartButton/spr_restartButton.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"c97dda10-418b-4948-9bbf-e381054b5915","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"350140cd-4ceb-4bc1-8d3c-be993992571d","path":"sprites/spr_continueButton/spr_continueButton.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"173b3433-e4cc-48f8-88bb-c85d22f1be8b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bf5f5744-6fd2-4f74-bb52-deede0eb83e4","path":"sprites/spr_restartButton/spr_restartButton.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_continueButton","path":"sprites/spr_continueButton/spr_continueButton.yy",},
+    "parent": {"name":"spr_restartButton","path":"sprites/spr_restartButton/spr_restartButton.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_continueButton",
+    "name": "spr_restartButton",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b5d843eb-be73-43c3-8776-06bab72a67f3","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"22f6e394-a9f9-4d00-b258-f7633540932e","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/Temp.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_continueButton",
+  "name": "spr_restartButton",
   "tags": [],
   "resourceType": "GMSprite",
 }

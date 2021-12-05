@@ -13,6 +13,7 @@ function token_attack(attacker, defender){
 				check_win_condition();
 			} else {
 				// check lose condition??
+				check_lose_condition();
 			}
 			
 		}
@@ -21,6 +22,14 @@ function token_attack(attacker, defender){
 	}
 	
 	attacker.can_attack = false;
+}
+
+function check_lose_condition() {
+	if(instance_number(obj_player) == 0) {
+		// lose
+		// goto lose screen
+		room_goto_next();
+	}
 }
 
 function check_win_condition() {
@@ -48,12 +57,12 @@ function win_condition() {
 function show_reward(reward) {
 	// create an unselectable instance of card
 	instance_deactivate_object(obj_endTurnButton);
-	var card = instance_create_layer(room_width/2, room_height/2, layer, obj_card);
+	var card = instance_create_layer(room_width/2, room_height/2, "UI", obj_card);
 	card.target_y = room_height/2;
 	// populate it's data with reward
 	card.data = obj_cardManager.cards[?reward];
 	obj_battleManager.selection_mode = mode.none;
-	
+	layer_set_visible("Cards", false);
 	// create a continue button that goes to the next room
-	instance_create_layer(room_width/2, room_height/2 + 256, layer, obj_continueButton);
+	instance_create_layer(room_width/2, room_height/2 + 256, "UI", obj_continueButton);
 }

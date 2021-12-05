@@ -7,12 +7,17 @@ cards = [
 ];
 
 rewards = [
+	"Photogenesis",
+	"Photogenesis",
 	"Pot of Green",
-	"Pot of Green",
+	"Thorns",
 	"Thorns",
 	"Thorns",
 	"Torch",
 	"Torch",
+	"Torch",
+	"Blade Bud",
+	"Armor Bud",
 	"Canopy",
 	"Janka 9000",
 	"Janka 9000",

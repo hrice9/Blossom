@@ -1,9 +1,8 @@
 /// @description Attack decision - Replace with individual enemy code
 randomize();
 action_num = irandom_range(1, 10);
-show_debug_message("HERE");
 
-
+// make this smarter
 if(action_num <= 2) { // attack
 	action = enemy_action.attack;
 	// pick a target

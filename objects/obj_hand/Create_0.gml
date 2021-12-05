@@ -25,7 +25,7 @@ deck = ds_list_create();
 	
 num_cards = array_length(cards);
 for(var i = 0; i < num_cards; i++) {
-	var card = instance_create_layer(0, 0, layer, obj_card);
+	var card = instance_create_layer(0, 0, "Cards", obj_card);
 	card.data = obj_cardManager.cards[?cards[i]];
 	card.visible = false;
 	ds_list_add(deck, card);
