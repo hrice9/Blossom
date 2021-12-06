@@ -7,6 +7,7 @@ enum mode {
 	enemy_select,
 	ally_select,
 	attack,
+	discard,
 	none
 }
 
@@ -14,7 +15,8 @@ enum phase {
 	draw,
 	card,
 	attack,
-	enemy
+	enemy,
+	discard
 }
 
 // load cards??
@@ -28,5 +30,6 @@ max_sun = 3;
 sun = max_sun;
 plusSun = 0;
 plusCards = 0;
+discard_card = false;
 
 // I am very good at naming variables

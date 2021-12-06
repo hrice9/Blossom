@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 active = false;
-if(obj_battleManager.selection_mode == mode.card_select) {
+if(obj_battleManager.selection_mode == mode.card_select || (obj_battleManager.selection_mode == mode.discard && selected_card == noone)) {
 	// I can do things
 	active = true;
 }

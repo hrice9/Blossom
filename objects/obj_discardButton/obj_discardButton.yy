@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_endTurnButton",
-    "path": "sprites/spr_endTurnButton/spr_endTurnButton.yy",
+    "name": "spr_battleTile",
+    "path": "sprites/spr_battleTile/spr_battleTile.yy",
   },
   "solid": false,
   "visible": true,
@@ -21,8 +21,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":7,"eventType":6,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -31,7 +30,7 @@
     "path": "folders/Objects/UI Buttons.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_endTurnButton",
+  "name": "obj_discardButton",
   "tags": [],
   "resourceType": "GMObject",
 }

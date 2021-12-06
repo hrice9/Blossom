@@ -1,4 +1,30 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-draw_text(10, 10, selection_mode);
+// at the top of the screen
+
+// play cards
+if(current_phase == phase.card) {
+	
+} else {
+	
+}
+// attack
+if(current_phase == phase.attack) {
+	
+} else {
+	
+}
+// discard
+if(current_phase == phase.discard) {
+	
+} else {
+	
+}
+// enemy phase
+if(current_phase == phase.enemy) {
+	
+} else {
+	
+}
+// restart

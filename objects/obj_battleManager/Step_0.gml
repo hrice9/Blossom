@@ -35,6 +35,7 @@ if(current_phase == phase.card) {
 		selected_ally = noone;
 		selected_enemy = noone;
 	}
+	
 } else if(current_phase == phase.attack) {
 	// select an ally and and then an enemy
 	if(selected_ally == noone) {
@@ -53,4 +54,11 @@ if(current_phase == phase.card) {
 	event_user(0);
 } else if(current_phase == phase.enemy) {
 	event_user(3);
+} else if(current_phase == phase.discard) {
+	event_user(4);
+	if(discard_card) {
+		discard_card = false;
+		obj_hand.destroy_card = true;
+	}
+	
 }
