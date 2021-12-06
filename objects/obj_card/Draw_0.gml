@@ -1,6 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if(instance_exists(obj_hand)) {
+	if(obj_hand.card_to_remove != noone) {
+		if(obj_hand.card_to_remove.id == id) {
+			selected = true;
+		}
+	}
+}
+
+
 if(selected) {
 	y = target_y -25;
 	depth = -100;

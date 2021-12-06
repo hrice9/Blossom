@@ -13,7 +13,7 @@ if(selected && mouse_check_button_pressed(mb_left)) {
 		}
 	} else if(obj_battleManager.selection_mode == mode.discard) {
 		obj_hand.card_to_remove = self;
-		obj_hand.selected_card = self;
+		//obj_hand.selected_card = self;
 	}
 	
 	

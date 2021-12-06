@@ -86,4 +86,5 @@ if(card_to_remove != noone && destroy_card) {
 	card_to_remove = noone;
 	destroy_card = false;
 	num_cards --;
+	selected_card = noone;
 }
