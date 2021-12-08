@@ -16,19 +16,7 @@ var hand_width = (num_cards-1) * card_width;
 if(active) {
 	for(var i = 0; i < num_cards; i++) {
 		var card = ds_list_find_value(hand, i)
-	
-		// half of the cards should be on the left side of the room, half should be on the right side of the room
-		// cards should be depth sorted from right in the back to left in the front
-		// selected card should be in front of all cards and larger
-	
-	
-		// this object is in charge of the x position of card objects
-		// cards are in charge of setting their own y position
-	
-		// if the next card is 
-	
-		// do card selection code here
-	
+		
 		if(position_meeting(mouse_x, mouse_y, card)) {
 			// card.selected = true;
 		
@@ -76,6 +64,12 @@ if(active) {
 		if(!card.selected) card.depth = i;
 		card.target_y = 4*room_height/5;
 	
+	}
+}
+else if(obj_battleManager.current_phase != phase.card && obj_battleManager.current_phase != phase.discard) {
+	for(var i = 0; i < num_cards; i++) {
+		var card = ds_list_find_value(hand, i)
+		card.target_y = room_height - 10;
 	}
 }
 

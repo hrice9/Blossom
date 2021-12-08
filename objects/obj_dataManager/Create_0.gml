@@ -28,3 +28,5 @@ rewards = [
 playerHP = 100;
 
 alarm[0] = 1; // load the next room after 1 frame
+
+audio_play_sound(snd_music, 11, true);

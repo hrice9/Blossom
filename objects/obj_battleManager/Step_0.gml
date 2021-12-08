@@ -9,6 +9,7 @@ if(current_phase == phase.card) {
 		// do the on_complete callback for the selected card
 		// obj_hand.card_to_remove.data.OnComplete();
 		obj_hand.selected_card.data.OnComplete();
+		audio_play_sound(snd_buff, 10, false);
 		sun -= obj_hand.selected_card.data.manaCost;
 		obj_hand.destroy_card = true;
 		selection_mode = mode.card_select;
@@ -19,6 +20,7 @@ if(current_phase == phase.card) {
 		// do the on_complete callback for the selected card
 		// obj_hand.card_to_remove.data.OnComplete();
 		obj_hand.selected_card.data.OnComplete();
+		audio_play_sound(snd_buff, 10, false);
 		sun -= obj_hand.selected_card.data.manaCost;
 		obj_hand.destroy_card = true;
 		selection_mode = mode.card_select;
@@ -29,6 +31,7 @@ if(current_phase == phase.card) {
 
 	if(selection_mode == mode.none) {
 		obj_hand.selected_card.data.OnComplete();
+		audio_play_sound(snd_buff, 10, false);
 		sun -= obj_hand.selected_card.data.manaCost;
 		obj_hand.destroy_card = true;
 		selection_mode = mode.card_select;

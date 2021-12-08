@@ -28,6 +28,8 @@ function check_lose_condition() {
 	if(instance_number(obj_player) == 0) {
 		// lose
 		// goto lose screen
+		audio_stop_sound(snd_music);
+		audio_play_sound(snd_lose, 10, false);
 		room_goto_next();
 	}
 }
@@ -46,6 +48,7 @@ function win_condition() {
 		array_push(cards, reward);
 		
 		show_reward(reward);
+		
 		
 		//room_restart();
 		// show that card in a reward screen

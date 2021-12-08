@@ -19,4 +19,11 @@ if(selected && mouse_check_button_pressed(mb_left)) {
 	
 }
 
+if(selected && !was_selected) {
+	//audio_stop_sound(snd_card);
+	audio_play_sound(snd_card, 10, false);
+}
+
+was_selected = selected;
+
 sprite_index = data.cardArt;
