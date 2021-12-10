@@ -6,7 +6,7 @@ function draw_stats(x, y, hp, def, atk, left){
 	var height = 120;
 	
 	// set the draw mode to multiply
-	gpu_set_blendmode_ext(bm_dest_colour, bm_zero);
+	gpu_set_blendmode_multiply();
 	// draw the rectangle
 	if(left) { // draw to the left of the character
 		draw_rectangle_color(x, y, x-width, y+height, c_white, c_black, c_black, c_white, false);
@@ -51,4 +51,8 @@ function draw_stats(x, y, hp, def, atk, left){
 	}
 	draw_set_valign(fa_top);
 	
+}
+
+function gpu_set_blendmode_multiply() {
+	gpu_set_blendmode_ext(bm_dest_colour, bm_zero);
 }

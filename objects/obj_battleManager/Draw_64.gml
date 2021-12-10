@@ -16,6 +16,15 @@ if(sun >= max_sun) {
 	color = c_red;
 }
 
+draw_set_font(fa_turnNum);
 draw_text_color(room_width/2, room_height - 50, sun, color, color, color, color, 1);
-draw_text_color(room_width/2, 35, "Turn: " + string(turnNum), c_black, c_black, c_black, c_black, 1);
+draw_text_color(room_width/2, 35, "Turn: " + string(turnNum), c_white, c_white, c_white, c_white, 1);
 draw_set_valign(fa_top);
+
+
+if(current_phase == phase.discard) {
+	draw_set_font(fa_discardCount);
+	var numToDiscard = ds_list_size(obj_hand.hand) - 2;
+	var plural = numToDiscard == 1 ? " card" : " cards";
+	draw_text_color(room_width/2, 678, "Discard " + string(numToDiscard) + plural, c_black, c_black, c_black, c_black, 1);
+}
