@@ -26,6 +26,9 @@ rewards = [
 ]
 
 playerHP = 100;
+level = 1;
+cycle = 1;
+step_in_cycle = 1;
 
 alarm[0] = 1; // load the next room after 1 frame
 

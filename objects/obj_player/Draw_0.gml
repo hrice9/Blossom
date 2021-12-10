@@ -11,3 +11,5 @@ if(obj_battleManager.selection_mode == mode.ally_select || obj_battleManager.sel
 		});
 	}
 }
+
+draw_stats(x - 120, y - 50, hitpoints, defense, attack, true);

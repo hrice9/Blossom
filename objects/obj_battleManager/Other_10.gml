@@ -20,5 +20,9 @@ for(var i = 0; i < player_num; i++) {
 sun = max_sun + plusSun; // plus bonus sun
 plusSun = 0;
 
+turnNum ++;
 current_phase = phase.card;
+selected_ally = noone;
+selected_enemy = noone;
 selection_mode = mode.card_select;
+enemy_turn = true;

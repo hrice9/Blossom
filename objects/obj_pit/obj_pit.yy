@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_pitIdle",
+    "path": "sprites/spr_pitIdle/spr_pitIdle.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -20,9 +23,17 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":7,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"ide_animation","path":"objects/obj_token/obj_token.yy",},"objectId":{"name":"obj_token","path":"objects/obj_token/obj_token.yy",},"value":"spr_pitIdle","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"injured_animation","path":"objects/obj_token/obj_token.yy",},"objectId":{"name":"obj_token","path":"objects/obj_token/obj_token.yy",},"value":"spr_pitInjured","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"attack_animation","path":"objects/obj_token/obj_token.yy",},"objectId":{"name":"obj_token","path":"objects/obj_token/obj_token.yy",},"value":"spr_pitAttack","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"hitpoints","path":"objects/obj_token/obj_token.yy",},"objectId":{"name":"obj_token","path":"objects/obj_token/obj_token.yy",},"value":"25","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"attack","path":"objects/obj_token/obj_token.yy",},"objectId":{"name":"obj_token","path":"objects/obj_token/obj_token.yy",},"value":"3","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "Enemies",
     "path": "folders/Objects/Characters/Enemies.yy",

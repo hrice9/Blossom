@@ -26,4 +26,16 @@ switch(action) {
 	case enemy_action.attack:
 		draw_sprite(spr_attackIndicator, 0, x, y - 150);
 		break;
+	case enemy_action.none:
+		break;
+}
+
+if(obj_battleManager.selection_mode == mode.enemy_select) {
+	if(position_meeting(mouse_x, mouse_y, self)) {
+		draw_stats(room_width - 580, y - 50, hitpoints, defense, attack, false);
+	} else {
+		draw_stats(room_width - 500, y - 50, hitpoints, defense, attack, false);
+	}
+} else {
+	draw_stats(room_width - 500, y - 50, hitpoints, defense, attack, false);
 }

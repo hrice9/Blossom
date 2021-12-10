@@ -23,11 +23,17 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":7,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [
     {"propertyId":{"name":"base_attack","path":"objects/obj_token/obj_token.yy",},"objectId":{"name":"obj_token","path":"objects/obj_token/obj_token.yy",},"value":"2","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"hitpoints","path":"objects/obj_token/obj_token.yy",},"objectId":{"name":"obj_token","path":"objects/obj_token/obj_token.yy",},"value":"25","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"hitpoints","path":"objects/obj_token/obj_token.yy",},"objectId":{"name":"obj_token","path":"objects/obj_token/obj_token.yy",},"value":"30","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"ide_animation","path":"objects/obj_token/obj_token.yy",},"objectId":{"name":"obj_token","path":"objects/obj_token/obj_token.yy",},"value":"spr_biteyIdle","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"injured_animation","path":"objects/obj_token/obj_token.yy",},"objectId":{"name":"obj_token","path":"objects/obj_token/obj_token.yy",},"value":"spr_bityInjured","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"attack_animation","path":"objects/obj_token/obj_token.yy",},"objectId":{"name":"obj_token","path":"objects/obj_token/obj_token.yy",},"value":"spr_bityAttack","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Enemies",
