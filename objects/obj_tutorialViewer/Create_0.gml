@@ -10,7 +10,7 @@ pages = [
 	],
 	[
 		"Playing cards",
-		"To play a card, select the desired card from your hand and click on Pit.\nEach card costs a certain amount of sun to play (indicated in the top right of the card)."
+		"To play a card, select the desired card from your hand and click on Pip.\nEach card costs a certain amount of sun to play (indicated in the top right of the card)."
 	],
 	[
 		"Buds",
@@ -18,7 +18,7 @@ pages = [
 	],
 	[
 		"Attacking",
-		"Once you are done playing your cards, select \"End Turn\" in the bottom right of the screen.\nSelect Pit and then the enemy that you wish to attack.\nYou will deal damage equal to your attack value minus the targets defense value.\nIf the target's defense value is higher than you attack value, you will do no damage."
+		"Once you are done playing your cards, select \"End Turn\" in the bottom right of the screen.\nSelect Pit and then the enemy that you wish to attack.\nYou will deal damage equal to your attack value minus the targets defense value.\nIf the target's defense value is higher than your attack value, you will do no damage."
 	],
 	[
 		"Discarding",
