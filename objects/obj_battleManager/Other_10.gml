@@ -26,3 +26,8 @@ selected_ally = noone;
 selected_enemy = noone;
 selection_mode = mode.card_select;
 enemy_turn = true;
+
+with(obj_hand) {
+	card_to_remove = noone;
+	selected_card = noone;
+}

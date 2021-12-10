@@ -50,6 +50,7 @@ if(current_phase == phase.card) {
 	
 	if(selected_ally != noone && selected_enemy != noone) {
 		token_attack(selected_ally, selected_enemy);
+		selected_ally.sprite_index = selected_ally.attack_animation;
 		selected_ally = noone;
 		selected_enemy = noone;
 	}

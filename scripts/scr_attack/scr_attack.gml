@@ -1,6 +1,7 @@
 
 
 function token_attack(attacker, defender){
+	audio_play_sound(snd_attack, 10, false);
 	var attack_val = attacker.attack - defender.defense;
 	defender.sprite_index = defender.injured_animation;
 	defender.image_index = 0; // Start the animation from 0
@@ -66,15 +67,18 @@ function win_condition() {
 
 function show_reward(reward) {
 	// create an unselectable instance of card
+	instance_create_layer(0, 0, "UI", obj_victoryScreen);
 	instance_deactivate_object(obj_endTurnButton);
 	var card = instance_create_layer(room_width/2, room_height/2, "UI", obj_card);
+	card.depth = -100;
 	card.target_y = room_height/2;
 	// populate it's data with reward
 	card.data = obj_cardManager.cards[?reward];
 	obj_battleManager.selection_mode = mode.none;
 	layer_set_visible("Cards", false);
 	// create a continue button that goes to the next room
-	instance_create_layer(room_width/2, room_height/2 + 256, "UI", obj_continueButton);
+	var button = instance_create_layer(room_width/2, room_height/2 + 256, "UI", obj_continueButton);
+	button.depth = -100;
 }
 
 function next_enemy_action() {

@@ -4,5 +4,4 @@
 // Inherit the parent event
 event_inherited();
 
-//hitpoints = obj_dataManager.playerHP;
-hitpoints = 1;
+hitpoints = obj_dataManager.playerHP;

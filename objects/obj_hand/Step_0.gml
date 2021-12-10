@@ -7,6 +7,20 @@ if(obj_battleManager.selection_mode == mode.card_select || (obj_battleManager.se
 	active = true;
 }
 
+if(selected_card != noone) {
+	if(mouse_check_button_pressed(mb_right)) {
+		selected_card.selected = false;
+		card_to_remove = noone;
+		selected_card = noone;
+		for(var i = 0; i < num_cards; i++) {
+			var card = ds_list_find_value(hand, i)
+			card.selected = false;
+		}
+		obj_battleManager.selection_mode = mode.card_select;
+		active = true;
+	}
+}
+
 
 num_cards = ds_list_size(hand);
 
