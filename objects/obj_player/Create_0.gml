@@ -5,3 +5,4 @@
 event_inherited();
 
 hitpoints = obj_dataManager.playerHP;
+can_attack = true;

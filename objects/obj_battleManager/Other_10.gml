@@ -31,3 +31,5 @@ with(obj_hand) {
 	card_to_remove = noone;
 	selected_card = noone;
 }
+
+obj_player.can_attack = true;

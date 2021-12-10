@@ -39,7 +39,7 @@ if(current_phase == phase.card) {
 		selected_enemy = noone;
 	}
 	
-} else if(current_phase == phase.attack) {
+} else if(current_phase == phase.attack && obj_player.can_attack) {
 	// select an ally and and then an enemy
 	if(selected_ally == noone) {
 		selection_mode = mode.ally_select;
@@ -50,9 +50,11 @@ if(current_phase == phase.card) {
 	
 	if(selected_ally != noone && selected_enemy != noone) {
 		token_attack(selected_ally, selected_enemy);
+		selected_ally.can_attack = false;
 		selected_ally.sprite_index = selected_ally.attack_animation;
 		selected_ally = noone;
 		selected_enemy = noone;
+		
 	}
 } else if(current_phase == phase.draw) {
 	event_user(0);
